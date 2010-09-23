@@ -1,0 +1,69 @@
+﻿<?xml version="1.0"?>
+
+<SyntaxDefinition name = "PicoAsm" extensions = ".pca">
+
+  <Digits name = "Digits" bold = "true" italic = "false" color = "DarkBlue"/>
+
+  <RuleSets>
+    <RuleSet ignorecase = "true">
+      <Delimiters>&amp;~!@%^*()-+=|\#/{}[]:;"'&lt;&gt; , .?</Delimiters>
+
+      <Span name = "LineComment" bold = "false" italic = "true" color = "SlateGray" stopateol = "true">
+        <Begin>;</Begin>
+      </Span>
+
+      <!-- \... commands -->
+      <MarkPrevious markmarker ="true" bold = "true" italic = "false" color = "MidnightBlue">:</MarkPrevious>
+      <MarkFollowing markmarker ="true" bold = "true" italic = "false" color = "MidnightBlue">.</MarkFollowing>
+
+      <!-- some commands must be handled specially -->
+      <KeyWords name = "Keyword1" bold = "false" italic = "false" color = "Blue">
+        <Key word = "mov" />
+        <Key word = "add" />
+        <Key word = "sub" />
+        <Key word = "mul" />
+        <Key word = "div" />
+        <Key word = "beq" />
+        <Key word = "bgt" />
+        <Key word = "in" />
+        <Key word = "out" />
+        <Key word = "jsr" />
+        <Key word = "rts" />
+        <Key word = "stop" />
+      </KeyWords>
+
+      <KeyWords name = "Keyword2" bold = "true" italic = "false" color = "DarkBlue">
+        <Key word = "ORG" />
+      </KeyWords>
+
+      <KeyWords name = "Puntuation" bold="true" italic="false" color="Green">
+        <Key word = ")" />
+        <Key word = ")" />
+        <Key word = "{" />
+        <Key word = "}" />
+        <Key word = "[" />
+        <Key word = "]" />
+        <Key word = "=" />
+        <Key word = "!" />
+        <Key word = "+" />
+        <Key word = "-" />
+        <Key word = "/" />
+        <Key word = "*" />
+        <Key word = "&gt;" />
+        <Key word = "&lt;" />
+        <Key word = "&amp;" />
+        <Key word = "|" />
+        <Key word = "^" />
+        <Key word = "~" />
+        <Key word = "." />
+        <Key word = "," />
+        <Key word = ";" />
+        <Key word = "?" />
+        <Key word = ":" />
+        <Key word = "'" />
+        <Key word = "`" />
+      </KeyWords>
+    </RuleSet>
+  </RuleSets>
+
+</SyntaxDefinition>

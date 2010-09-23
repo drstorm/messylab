@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessyLab", "MessyLab\MessyLab.csproj", "{CB3C6779-EA85-4AAE-A001-7D7D44B1FE2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicoAsm", "PicoAsm\PicoAsm.csproj", "{311199BD-6115-4846-BDD7-848DEBF21E29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PicoVM", "PicoVM\PicoVM.csproj", "{4EB80409-5D42-40D8-898A-9BDB1A91C619}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugger", "Debugger\Debugger.csproj", "{D9A31F55-AE03-4ABD-856E-47A1295E3ACF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{7EF13BA0-6665-4D6A-9701-8AB7D41FF202}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\grammatica-1.5.dll = Libraries\grammatica-1.5.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsUI", "Libraries\DockPanel\WinFormsUI\WinFormsUI.csproj", "{C75532C4-765B-418E-B09B-46D36B2ABDB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICSharpCode.TextEditor", "Libraries\ICSharpCode.TextEditor\Project\ICSharpCode.TextEditor.csproj", "{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{1DD2CD75-1A74-41F4-BA01-47426EBD5E62}"
+	ProjectSection(SolutionItems) = preProject
+		Images\About.png = Images\About.png
+		Images\Icon.ico = Images\Icon.ico
+		Images\Project.ico = Images\Project.ico
+		Images\Splash.png = Images\Splash.png
+		Images\StartPage.png = Images\StartPage.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{311199BD-6115-4846-BDD7-848DEBF21E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{311199BD-6115-4846-BDD7-848DEBF21E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{311199BD-6115-4846-BDD7-848DEBF21E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{311199BD-6115-4846-BDD7-848DEBF21E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB80409-5D42-40D8-898A-9BDB1A91C619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB80409-5D42-40D8-898A-9BDB1A91C619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB80409-5D42-40D8-898A-9BDB1A91C619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB80409-5D42-40D8-898A-9BDB1A91C619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9A31F55-AE03-4ABD-856E-47A1295E3ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9A31F55-AE03-4ABD-856E-47A1295E3ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9A31F55-AE03-4ABD-856E-47A1295E3ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9A31F55-AE03-4ABD-856E-47A1295E3ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C75532C4-765B-418E-B09B-46D36B2ABDB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75532C4-765B-418E-B09B-46D36B2ABDB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C75532C4-765B-418E-B09B-46D36B2ABDB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C75532C4-765B-418E-B09B-46D36B2ABDB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB3C6779-EA85-4AAE-A001-7D7D44B1FE2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB3C6779-EA85-4AAE-A001-7D7D44B1FE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB3C6779-EA85-4AAE-A001-7D7D44B1FE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB3C6779-EA85-4AAE-A001-7D7D44B1FE2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C75532C4-765B-418E-B09B-46D36B2ABDB1} = {7EF13BA0-6665-4D6A-9701-8AB7D41FF202}
+		{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D} = {7EF13BA0-6665-4D6A-9701-8AB7D41FF202}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
