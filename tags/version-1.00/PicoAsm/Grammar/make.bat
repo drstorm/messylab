@@ -1,0 +1,1 @@
+java -jar grammatica-1.5.jar pico.grammar --csoutput cs --csnamespace MessyLab.PicoComputer

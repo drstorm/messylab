@@ -1,0 +1,105 @@
+%header%
+
+GRAMMARTYPE = "LL"
+CASESENSITIVE = "false"
+
+DESCRIPTION = "picoComputer Assembler Grammar for Grammatica"
+
+AUTHOR      = "Milos Andjelkovic"
+VERSION     = "1.0"
+DATE        = "Dec 2009"
+
+%tokens%
+
+MOV                          = "mov"
+ADD                          = "add"
+SUB                          = "sub"
+MUL                          = "mul"
+DIV                          = "div"
+BEQ                          = "beq"
+BGT                          = "bgt"
+IN                           = "in"
+OUT                          = "out"
+JSR                          = "jsr"
+RTS                          = "rts"
+STOP                         = "stop"
+ORG                          = "org"
+
+EQUALS                       = "="
+LEFT_PAREN                   = "("
+RIGHT_PAREN                  = ")"
+HASH                         = "#"
+COLON                        = ":"
+COMMA                        = ","
+
+SIGN                         = <<[+-]>>
+NUMBER                       = <<[0-9]+>>
+IDENTIFIER                   = <<[a-z][a-z0-9_]*>>
+
+ENTER                        = <<[\n\r]+>>
+SINGLE_LINE_COMMENT          = <<;.*>> %ignore%
+WHITESPACE                   = <<[ \t]+>> %ignore%
+
+
+%productions%
+
+Program = [Separator] Symbols Origin Lines ;
+
+Separator = ENTER (ENTER)* ;
+
+Symbols = Symbol (Symbol)* ;
+
+Symbol = IDENTIFIER "=" Integer Separator ;
+
+Integer = [SIGN] NUMBER ;
+
+Origin = ORG NUMBER Separator;
+
+Lines = Line (Line)* ;
+
+Line = [IDENTIFIER ":"] Instruction Separator ;
+
+Instruction = Move
+              | Arithmetic
+			  | Branch
+			  | IO
+			  | Call
+			  | Return
+			  | End ;
+
+Move       = MOV                     MoveArgs ;
+Arithmetic = (ADD | SUB | MUL | DIV) ArithmeticArgs ;
+Branch     = (BEQ | BGT)             BranchArgs ;
+IO         = (IN | OUT)              IOArgs ;
+Call       = JSR                     Arg3 ;
+Return     = RTS                     ;
+End        = STOP                    (EndArgs)? ;
+
+/*
+ * Argument examples:
+ *
+ * Arg1: 15
+ * Arg2: #x
+ * Arg3: x
+ * Arg4: (x)
+*/
+
+MoveArgs = Arg34 "," (Arg1234 | Arg34 "," Arg123) ;
+
+ArithmeticArgs = Arg34 "," (Arg34 "," Arg1234 | Arg12 "," Arg34) ;
+
+BranchArgs = (Arg34 "," (Arg34 | Arg1) | Arg1 "," Arg34) "," Arg34 ;
+
+IOArgs = Arg34 ["," Arg1234] ;
+
+EndArgs = Arg34 ["," Arg34 ["," Arg34]] ;
+
+Arg12 = Arg1 | Arg2 ;
+Arg34 = Arg3 | Arg4 ;
+Arg123 = Arg1 | Arg2 | Arg3 ;
+Arg1234 = Arg1 | Arg2 | Arg3 | Arg4 ;
+
+Arg1 = Integer ;
+Arg2 = "#" IDENTIFIER ;
+Arg3 = IDENTIFIER ;
+Arg4 = "(" IDENTIFIER ")" ;

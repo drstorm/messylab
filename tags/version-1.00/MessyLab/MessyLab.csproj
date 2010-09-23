@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CB3C6779-EA85-4AAE-A001-7D7D44B1FE2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MessyLab</RootNamespace>
+    <AssemblyName>MessyLab</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewProjectForm.Designer.cs">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\BreakpointsPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\BreakpointsPad.Designer.cs">
+      <DependentUpon>BreakpointsPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\Dialogs\NewIOBreakpointForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\Dialogs\NewIOBreakpointForm.Designer.cs">
+      <DependentUpon>NewIOBreakpointForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\Dialogs\NewMemoryBreakpointForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\Dialogs\NewMemoryBreakpointForm.Designer.cs">
+      <DependentUpon>NewMemoryBreakpointForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\Dialogs\NewRegisterBreakpointForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\Dialogs\NewRegisterBreakpointForm.Designer.cs">
+      <DependentUpon>NewRegisterBreakpointForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\Dialogs\NewWatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\Dialogs\NewWatchForm.Designer.cs">
+      <DependentUpon>NewWatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\HardwarePad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\HardwarePad.Designer.cs">
+      <DependentUpon>HardwarePad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\WatchPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\WatchPad.Designer.cs">
+      <DependentUpon>WatchPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Platforms\BreakpointController.cs" />
+    <Compile Include="Platforms\DebuggablePlatform.cs" />
+    <Compile Include="Platforms\DebuggerController.cs" />
+    <Compile Include="Pads\AbstractEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\Bookmarks\BreakpointBookmark.cs" />
+    <Compile Include="Pads\Bookmarks\HighlightBookmark.cs" />
+    <Compile Include="Pads\Bookmarks\MarkerBookmark.cs" />
+    <Compile Include="Pads\Dialogs\FindAndReplaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\Dialogs\FindAndReplaceForm.designer.cs">
+      <DependentUpon>FindAndReplaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\Dialogs\IntegerInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\Dialogs\IntegerInputForm.Designer.cs">
+      <DependentUpon>IntegerInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\ErrorListPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\ErrorListPad.Designer.cs">
+      <DependentUpon>ErrorListPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\ListPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\ListPad.Designer.cs">
+      <DependentUpon>ListPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\Pad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\Pad.Designer.cs">
+      <DependentUpon>Pad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\ProjectPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\ProjectPad.Designer.cs">
+      <DependentUpon>ProjectPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\TaskListPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\TaskListPad.Designer.cs">
+      <DependentUpon>TaskListPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewProjectItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewProjectItemForm.Designer.cs">
+      <DependentUpon>NewProjectItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Platforms\Pico\ConsolePad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Platforms\Pico\ConsolePad.Designer.cs">
+      <DependentUpon>ConsolePad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Platforms\Pico\PicoDebuggerController.cs" />
+    <Compile Include="Platforms\Pico\PicoPlatform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Platforms\Pico\PicoProjectItemFactory.cs" />
+    <Compile Include="Platforms\Pico\PicoPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Platforms\Pico\PicoPropertiesForm.Designer.cs">
+      <DependentUpon>PicoPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Platforms\Pico\PicoTextEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Platforms\Pico\PicoTextEditorForm.Designer.cs">
+      <DependentUpon>PicoTextEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Platforms\Platform.cs" />
+    <Compile Include="Platforms\PlatformFactory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="ProjectFactory.cs" />
+    <Compile Include="ProjectItem.cs" />
+    <Compile Include="ProjectItemAbstractFactory.cs" />
+    <Compile Include="ProjectMemento.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProjectForm.resx">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\BreakpointsPad.resx">
+      <DependentUpon>BreakpointsPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\Dialogs\FindAndReplaceForm.resx">
+      <DependentUpon>FindAndReplaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\Dialogs\IntegerInputForm.resx">
+      <DependentUpon>IntegerInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\Dialogs\NewIOBreakpointForm.resx">
+      <DependentUpon>NewIOBreakpointForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\Dialogs\NewMemoryBreakpointForm.resx">
+      <DependentUpon>NewMemoryBreakpointForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\Dialogs\NewRegisterBreakpointForm.resx">
+      <DependentUpon>NewRegisterBreakpointForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\Dialogs\NewWatchForm.resx">
+      <DependentUpon>NewWatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\ErrorListPad.resx">
+      <DependentUpon>ErrorListPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\HardwarePad.resx">
+      <DependentUpon>HardwarePad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\ListPad.resx">
+      <DependentUpon>ListPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\Pad.resx">
+      <DependentUpon>Pad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\ProjectPad.resx">
+      <DependentUpon>ProjectPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\TaskListPad.resx">
+      <DependentUpon>TaskListPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\WatchPad.resx">
+      <DependentUpon>WatchPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProjectItemForm.resx">
+      <DependentUpon>NewProjectItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Platforms\Pico\ConsolePad.resx">
+      <DependentUpon>ConsolePad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Platforms\Pico\PicoPropertiesForm.resx">
+      <DependentUpon>PicoPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Platforms\Pico\PicoTextEditorForm.resx">
+      <DependentUpon>PicoTextEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pads\TextEditorForm.resx">
+      <DependentUpon>TextEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RecentManager.cs" />
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pads\TextEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pads\TextEditorForm.Designer.cs">
+      <DependentUpon>TextEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Debugger\Debugger.csproj">
+      <Project>{D9A31F55-AE03-4ABD-856E-47A1295E3ACF}</Project>
+      <Name>Debugger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\DockPanel\WinFormsUI\WinFormsUI.csproj">
+      <Project>{C75532C4-765B-418E-B09B-46D36B2ABDB1}</Project>
+      <Name>WinFormsUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libraries\ICSharpCode.TextEditor\Project\ICSharpCode.TextEditor.csproj">
+      <Project>{2D18BE89-D210-49EB-A9DD-2246FBB3DF6D}</Project>
+      <Name>ICSharpCode.TextEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PicoAsm\PicoAsm.csproj">
+      <Project>{311199BD-6115-4846-BDD7-848DEBF21E29}</Project>
+      <Name>PicoAsm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PicoVM\PicoVM.csproj">
+      <Project>{4EB80409-5D42-40D8-898A-9BDB1A91C619}</Project>
+      <Name>PicoVM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+    <Content Include="Platforms\Pico\DefaultDock.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Platforms\Pico\Empty.pca">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
