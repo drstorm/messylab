@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+
+<SyntaxDefinition name = "Info" extensions = ".info">
+  <RuleSets>
+    <RuleSet ignorecase = "true">
+
+      <Span name = "Binary" bold = "false" stopateol = "true" color = "Blue">
+        <Begin>:</Begin>
+      </Span>
+
+    </RuleSet>
+  </RuleSets>
+
+</SyntaxDefinition>
