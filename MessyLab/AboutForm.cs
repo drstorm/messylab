@@ -45,7 +45,7 @@ namespace MessyLab
 		{
 			// TODO: Update when outdated or rewrite to dynamically load the data.
 			listBox.Items.Clear();
-			listBox.Items.Add("Messy Lab IDE 1.00");
+			listBox.Items.Add("Messy Lab IDE 1.01");
 			listBox.Items.Add("ML Debugger 1.00");
 			listBox.Items.Add("PicoAsm 1.00");
 			listBox.Items.Add("PicoVM 1.00");

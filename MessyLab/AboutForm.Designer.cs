@@ -70,9 +70,9 @@
 			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Location = new System.Drawing.Point(14, 221);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(73, 17);
+			this.label2.Size = new System.Drawing.Size(80, 17);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "Version 1.0";
+			this.label2.Text = "Version 1.01";
 			// 
 			// label3
 			// 
