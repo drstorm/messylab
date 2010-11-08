@@ -371,8 +371,8 @@ namespace MessyLab
 			{
 				d.Title = title;
 				d.Filter = filter;
-				if (string.IsNullOrEmpty(defaultExt)) d.DefaultExt = defaultExt;
-				if (string.IsNullOrEmpty(initialDirectory)) d.InitialDirectory = initialDirectory;
+				if (!string.IsNullOrEmpty(defaultExt)) d.DefaultExt = defaultExt;
+				if (!string.IsNullOrEmpty(initialDirectory)) d.InitialDirectory = initialDirectory;
 
 				d.Multiselect = false;
 				d.CheckFileExists = true;

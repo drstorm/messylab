@@ -1,18 +1,18 @@
 [Setup]
 AppName=Messy Lab
-AppVersion=1.0
-AppVerName=Messy Lab 1.0
+AppVersion=1.01
+AppVerName=Messy Lab 1.01
 AppCopyright=Copyright ¬ 2010 Milos Andjelkovic
 AppPublisher=Messy Lab
 AppPublisherURL=http://www.messylab.com
 AppID={{8FAD026B-CA55-408F-82A4-FDBC58200387}
-VersionInfoVersion=1.0
+VersionInfoVersion=1.01
 VersionInfoCompany=Messy Lab
 VersionInfoCopyright=Copyright ¬ 2010 Milos Andjelkovic
 VersionInfoProductName=Messy Lab
-VersionInfoProductVersion=1.0
+VersionInfoProductVersion=1.01
 OutputDir=Inno Setup\bin
-OutputBaseFilename=MessyLab-1.0
+OutputBaseFilename=MessyLab-1.01
 DirExistsWarning=no
 CreateAppDir=true
 SourceDir=..
@@ -101,4 +101,5 @@ begin
   end;
 
 end;
+
 
