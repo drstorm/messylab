@@ -20,7 +20,7 @@
 }
 .site-title {
 	@include row;
-	@include media($large) {
+	@include media($small) {
 		@include span-columns(4);
 	}
 	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
@@ -90,11 +90,8 @@
 .top-menu {
 	display: none;
 	position: relative;
-	@include media($medium) {
-		@include span-columns(12);
-	}
-	@include media($large) {
-		@include span-columns(7);
+	@include media($small) {
+		@include span-columns(8);
 		ul {
 			position: absolute;
 			right: 0;
