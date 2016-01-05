@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+  <base href="" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="messy lab, messylab, ide, assembler, assembly, picocomputer" />
+  <meta name="title" content="Architecture" />
+  <meta name="author" content="Miloš Anđelković" />
+  <meta name="description" content="Messy Lab - IDE for Assembly Programming Training" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Architecture</title>
+  <link href="../templates/messy_lab/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="../media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="../media/system/js/caption.js"></script>
+
+<link rel="stylesheet" href="../templates/system/css/system.css" type="text/css" />
+<link rel="stylesheet" href="../templates/system/css/general.css" type="text/css" />
+<link rel="stylesheet" href="../templates/messy_lab/css/template.css" type="text/css" />
+</head>
+<body id="page_bg" class="color_red bg_black width_fmax">
+<a name="up" id="up"></a>
+<div id="wrapper1">
+<div id="wrapper2">
+<div id="wrapper3">
+
+            <div id="header_small">
+        <div id="logo_small" onclick="javascript: window.location.href = '../index.html'"></div>
+      </div>
+      
+      <div id="tabarea">
+        <div id="topmenu_w">
+        <table cellpadding="0" cellspacing="0" class="topmenu_t">
+          <tr>
+            <td class="topmenu_t_m">
+              <div id="topmenu">
+                <ul class="menu"><li class="item15"><a href="../messy-lab.html"><span>Messy Lab</span></a></li><li class="active item16"><a href="../picocomputer.html"><span>picoComputer</span></a></li><li class="item17"><a href="../download.html"><span>Download</span></a></li><li class="item18"><a href="../about.html"><span>About</span></a></li></ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+        </div>
+        <div id="pathway">
+          <span class="breadcrumbs pathway">
+<a href="../index.html" class="pathway">Home</a> <img src="../templates/messy_lab/images/arrow.png" alt=""  /> <a href="../picocomputer.html" class="pathway">picoComputer</a> <img src="../templates/messy_lab/images/arrow.png" alt=""  /> Architecture</span>
+
+        </div>
+      </div>
+      
+      <div class="clr"></div>
+      
+      <div id="whitebox">
+        <div id="area">
+          
+          
+          <div id="leftcolumn">
+                        		<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Navigation</h3>
+											<ul class="menu"><li class="item1"><a href="../index.html"><span>Home</span></a></li><li class="item11"><a href="../messy-lab.html"><span>Messy Lab</span></a></li><li class="parent active item12"><a href="../picocomputer.html"><span>picoComputer</span></a><ul><li id="current" class="active item19"><a href="architecture.html"><span>Architecture</span></a></li><li class="item22"><a href="syntax.html"><span>Syntax</span></a></li><li class="parent item20"><a href="instructions.html"><span>Instructions</span></a></li></ul></li><li class="item13"><a href="../download.html"><span>Download</span></a></li><li class="item14"><a href="../about.html"><span>About</span></a></li></ul>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Search</h3>
+											<form action="http://www.messylab.com/picocomputer/index.php" method="post">
+	<div class="search">
+		<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" type="text" size="20" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" />	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+	<input type="hidden" name="Itemid" value="19" />
+</form>					</div>
+				</div>
+			</div>
+		</div>
+	
+                      </div>
+
+                    <div id="maincolumn">
+                                  
+            <table class="nopad">
+              <tr valign="top">
+                <td><table class="contentpaneopen">
+<tr>
+		<td class="contentheading" width="100%">
+					Architecture			</td>
+				
+				<td align="right" width="100%" class="buttonheading">
+		<a href="architecture@tmpl=component&amp;print=1&amp;page=.html" title="Print" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow"><img src="../images/M_images/printButton.png" alt="Print"  /></a>		</td>
+		
+					</tr>
+</table>
+
+<table class="contentpaneopen">
+
+
+
+<tr>
+<td valign="top">
+<p>picoComputer features a very simple architecture that consists of the CPU, RAM and an I/O Device, connected using a single Bus, as shown on the following figure:</p>
+<p><img style="margin-top: 20px; margin-bottom: 20px;" src="../images/stories/pc/pc-architecture.png" alt="pc-architecture" /></p>
+<h2>Memory</h2>
+<p>The memory of a picoComputer contains a maximum of 65536 words, each 16 bits wide. That means that the addresses are 16 bits wide as well. The memory is divided in two logical parts, as depicted on the following figure:</p>
+<p><img style="margin-top: 20px; margin-bottom: 20px;" src="../images/stories/pc/pc-memory.png" alt="pc-memory" /></p>
+<p>The Fixed Data Area consists of the first 8 memory locations and these locations play the role similar to that of the general-purpose processor Registers found in most of the other processor architectures.</p>
+<p>The rest of the memory can be used arbitrarily, but it is important to keep in mind that the call stack starts at the last memory location (the one with the highest address) and grows downward. That's why it is important not to use the memory locations that could be overwritten by the stack as it grows.</p>
+<h2>I/O Device</h2>
+<p>The I/O Device is basically a screen and a keyboard in the same case. That way the numerical data can be entered using the keyboard, and the screen can display the values from the picoComputer memory.</p>
+<p>As you can see, the design is as simple as possible, which follows the general philosophy of the platform. The input/output operations are blocking calls, which means that there is no parallelism. Consequently, it is not necessary to keep polling a status register (which does not even exist) to check whether an I/O operation is complete. By the time the instruction is executed, so is the I/O operation.</p>
+<p>It is worth noting that there is no way to handle interrupts on the picoComputer. The only interrupt that the I/O Device can generate is the one signaling an invalid input. Each interrupt simply aborts the program execution on the picoComputer.</p>
+<h2>Processor</h2>
+<p>The processor has two accessible registers, PC and SP. The PC register (Program Counter) points to the current instruction in memory. The SP register is the Stack Pointer. Neither one is can be used in an instruction as an operand.</p>
+<p>The value of PC is incremented automatically after every executed instruction, or it can be directly set by a branch instruction. It is assumed that there is a way to initialize PC before the program execution starts. The same applies to the initial content of the memory.</p>
+<p>The value of the SP register is updated when executing one of the two instructions used to support sub-routines and that is the only supported way to use the stack. Of course, since the stack is located in RAM like any other data, it can be modified manually, but that is simply not its recommended use.</p>
+<p>There is a number of internal registers, but the internal workings of a processor are generally not of any consequence when writing an assembly program. That is why, they fall out of the scope of this article.</p></td>
+</tr>
+
+</table>
+<span class="article_separator">&nbsp;</span>
+
+                  </td>
+                              </tr>
+            </table>
+          </div>
+          <div class="clr"></div>
+        </div>
+
+        <div class="clr"></div>
+      </div>
+      
+      <!--<div id="footerspacer"></div>-->
+      <div id="footer">
+        <div id="footer_l">
+          <div id="footer_r">
+            <p id="syndicate">
+              
+            </p>
+            <p id="power_by">
+			Copyright &copy; 2010-2016. Miloš Anđelković. Powered by <a href="http://www.joomla.org">Joomla!</a>. Valid <a href="http://validator.w3.org/check/referer">XHTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+	  <base href="" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="keywords" content="messy lab, messylab, ide, assembler, assembly, picocomputer" />
+  <meta name="title" content="Syntax" />
+  <meta name="author" content="Miloš Anđelković" />
+  <meta name="description" content="Messy Lab - IDE for Assembly Programming Training" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Syntax</title>
+  <link href="../templates/messy_lab/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="../media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="../media/system/js/caption.js"></script>
+
+	<link rel="stylesheet" href="../templates/messy_lab/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	
+	<table class="contentpaneopen">
+<tr>
+		<td class="contentheading" width="100%">
+					Syntax			</td>
+				<td align="right" width="100%" class="buttonheading">
+		<a href="syntax.html#" onclick="window.print();return false;"><img src="../images/M_images/printButton.png" alt="Print"  /></a>		</td>
+	</tr>
+</table>
+
+<table class="contentpaneopen">
+
+
+
+<tr>
+<td valign="top">
+<p>Consider the following picoComputer program:</p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; Symbols<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a = 1<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b = 2<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = 3<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; Origin<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ORG 8<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; Instructions<br /></code></p>
+<p><code>start:&nbsp; in a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ; input a<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in b&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; input b<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add c, a, b&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; ; c = a + b<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; out c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ; output c<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ; input a<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; beq a, 0, end&nbsp; &nbsp; &nbsp;&nbsp; ; if a=0 goto end<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; beq a, a, start&nbsp;&nbsp;&nbsp;&nbsp; ; goto start<br />end:&nbsp;&nbsp;&nbsp; stop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ; stop execution</code></p>
+<p> </p>
+<p>Every pC program consists of three sections. The first one contains the Symbol definitions, the second one contains a single ORG directive which specifies the address of the first instruction and the third one contains a list of instructions of the program.</p>
+<h4>Symbols</h4>
+<p>The Symbols section is used to define symbol names and their values. Using symbols allows the code to be more human-readable, however the symbol names are discarded during the assembling process, and only their numerical values are used.</p>
+<p>Another way to define symbols is by defining labels. A label is an identifier put in front of an instruction followed by a colon. Examples are <strong><span style="font-family: courier new,courier;">start</span></strong> and <span style="font-family: courier new,courier;"><strong>end</strong></span> from the code above. The value of a label is the address of the instruction following it. For example, label <span style="font-family: courier new,courier;"><strong>start</strong></span> has the value of 8.</p>
+<h4>Origin</h4>
+<p>The ORG directive is used to define the address of the first instruction. This is the value that will be stored in the PC register of the processor when loading the program.</p>
+<h4>Instructions</h4>
+<p>An instruction is defined by its symbolic name, followed by a comma-separated list of operands. There are four kinds of operands supported in the pC symbolic language, as explained in the following table:</p>
+<table class="articletable" border="0">
+<tbody>
+<tr>
+<th>Format</th><th>Example</th><th valign="top" scope="col">Addressing</th><th>Description</th>
+</tr>
+<tr>
+<td>symbol</td>
+<td>a</td>
+<td valign="top">Direct</td>
+<td>The Address of the memory location holding the operand is the value of the symbol.</td>
+</tr>
+<tr>
+<td>(symbol)</td>
+<td>(a)</td>
+<td valign="top">Indirect</td>
+<td>The Address of the memory location holding the operand is stored in memory. The address of the location holding the address is the value of the symbol.</td>
+</tr>
+<tr>
+<td>#symbol</td>
+<td>#a</td>
+<td valign="top">Immidiate</td>
+<td>&nbsp;The operand value is the value of the symbol.<br /></td>
+</tr>
+<tr>
+<td>constant</td>
+<td>5</td>
+<td valign="top">Immidiate</td>
+<td>&nbsp;The operand value is the specified constant itself.<br /></td>
+</tr>
+</tbody>
+</table>
+<p>For further information about the supported instructions, click <a href="instructions.html">here</a>.</p></td>
+</tr>
+
+</table>
+<span class="article_separator">&nbsp;</span>
+
+</body>
+</html>

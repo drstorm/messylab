@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! 1.5 - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Messy Lab</title>
+		<description>Messy Lab - IDE for Assembly Programming Training</description>
+		<link>http://www.messylab.com/component/content/frontpage</link>
+		<lastBuildDate>Tue, 05 Jan 2016 14:44:11 +0000</lastBuildDate>
+		<generator>Joomla! 1.5 - Open Source Content Management</generator>
+		<language>en-gb</language>
+		<item>
+			<title>At a glance</title>
+			<link>http://www.messylab.com/component/content/article/6-front-page/3-at-a-glance</link>
+			<guid>http://www.messylab.com/component/content/article/6-front-page/3-at-a-glance</guid>
+			<description><![CDATA[<p>Messy Lab is an free, open-source Integrated Development Environment (IDE) for Assembly Languages.</p>
+<p>The primary goal for Messy Lab is to provide an intuitive environment for the students of Computer Sciences and Software Engineering, where they can safely and comfortably learn the basics of Assembly programming. The interface is designed to be user-friendly and immediately familiar to anyone who used one of the more popular development environments before.</p>
+<p>By providing a familiar surrounding, Messy Lab allows its users to focus on the challenges of the assembly programming itself, instead of wasting the effort on getting used to hostile-seeming environments provided by some of the other assembler development solutions.</p>]]></description>
+			<author>drstorm@messylab.com (Miloš Anđelković)</author>
+			<category>frontpage</category>
+			<pubDate>Mon, 26 Jul 2010 15:25:24 +0000</pubDate>
+		</item>
+		<item>
+			<title>picoComputer</title>
+			<link>http://www.messylab.com/component/content/article/6-front-page/4-picocomputer</link>
+			<guid>http://www.messylab.com/component/content/article/6-front-page/4-picocomputer</guid>
+			<description><![CDATA[<p>picoComputer is a computer architecture designed to aid teaching of assembly languages.</p>
+<p>Even though it is very simplistic and relatively old, picoComputer is still relevant today. The basic principles of the computer technology didn't change much, if at all, since its inception and when it comes to assembly programming, the picoComputer architecture is capable of demonstrating those very principles.</p>
+<p>That is why the picoComputer was selected to be the first platform supported by Messy Lab.</p>]]></description>
+			<author>drstorm@messylab.com (Miloš Anđelković)</author>
+			<category>frontpage</category>
+			<pubDate>Mon, 26 Jul 2010 16:30:39 +0000</pubDate>
+		</item>
+		<item>
+			<title>Debugger</title>
+			<link>http://www.messylab.com/component/content/article/6-front-page/5-debugger</link>
+			<guid>http://www.messylab.com/component/content/article/6-front-page/5-debugger</guid>
+			<description><![CDATA[<p>Messy Lab comes with its own debugger. It is well integrated within the environment, but it can be used as a stand-alone command-line (CLI) application as well.</p>
+<p>The CLI flont-end uses commands similar to those of <a href="http://www.gnu.org/software/gdb/">GDB</a>, so anyone familiar with GDB should feel right at home.</p>
+<p>Finally, with the support of the underlying execution environment, e.g. a virtual machine, the debugger features historical, or backwards execution.</p>]]></description>
+			<author>drstorm@messylab.com (Miloš Anđelković)</author>
+			<category>frontpage</category>
+			<pubDate>Mon, 26 Jul 2010 16:51:25 +0000</pubDate>
+		</item>
+		<item>
+			<title>On-the-fly assembling</title>
+			<link>http://www.messylab.com/component/content/article/6-front-page/6-on-the-fly-assembling</link>
+			<guid>http://www.messylab.com/component/content/article/6-front-page/6-on-the-fly-assembling</guid>
+			<description><![CDATA[<p>The code editor features&nbsp;On-the-fly&nbsp;assembling of the source code which means that the your code is being processed as you type.</p>
+<p>The generated machine code is displayed along side with the source code, making it easy to see the direct link that exists between the symbolic representation of the machine code (i.e. the source code)&nbsp;and its actual binary form.</p>]]></description>
+			<author>drstorm@messylab.com (Miloš Anđelković)</author>
+			<category>frontpage</category>
+			<pubDate>Mon, 26 Jul 2010 16:59:49 +0000</pubDate>
+		</item>
+		<item>
+			<title>Open-source</title>
+			<link>http://www.messylab.com/component/content/article/6-front-page/7-open-source</link>
+			<guid>http://www.messylab.com/component/content/article/6-front-page/7-open-source</guid>
+			<description><![CDATA[<p>Messy Lab is distributed under the Apache License. That essentially means that you are free to use the app and its source code any way you like. So, if you're familiar with C#, grab your copy of the code and start exploring.</p>
+<p>You are <em>not</em> required under the license to publish any modifications you make to the source, but contributing bug fixes and new features would be appreciated.</p>]]></description>
+			<author>drstorm@messylab.com (Miloš Anđelković)</author>
+			<category>frontpage</category>
+			<pubDate>Mon, 26 Jul 2010 17:23:36 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

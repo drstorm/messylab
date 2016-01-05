@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+  <base href="" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="messy lab, messylab, ide, assembler, assembly, picocomputer" />
+  <meta name="title" content="Syntax" />
+  <meta name="author" content="Miloš Anđelković" />
+  <meta name="description" content="Messy Lab - IDE for Assembly Programming Training" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Syntax</title>
+  <link href="../templates/messy_lab/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="../media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="../media/system/js/caption.js"></script>
+
+<link rel="stylesheet" href="../templates/system/css/system.css" type="text/css" />
+<link rel="stylesheet" href="../templates/system/css/general.css" type="text/css" />
+<link rel="stylesheet" href="../templates/messy_lab/css/template.css" type="text/css" />
+</head>
+<body id="page_bg" class="color_red bg_black width_fmax">
+<a name="up" id="up"></a>
+<div id="wrapper1">
+<div id="wrapper2">
+<div id="wrapper3">
+
+            <div id="header_small">
+        <div id="logo_small" onclick="javascript: window.location.href = '../index.html'"></div>
+      </div>
+      
+      <div id="tabarea">
+        <div id="topmenu_w">
+        <table cellpadding="0" cellspacing="0" class="topmenu_t">
+          <tr>
+            <td class="topmenu_t_m">
+              <div id="topmenu">
+                <ul class="menu"><li class="item15"><a href="../messy-lab.html"><span>Messy Lab</span></a></li><li class="active item16"><a href="../picocomputer.html"><span>picoComputer</span></a></li><li class="item17"><a href="../download.html"><span>Download</span></a></li><li class="item18"><a href="../about.html"><span>About</span></a></li></ul>
+              </div>
+            </td>
+          </tr>
+        </table>
+        </div>
+        <div id="pathway">
+          <span class="breadcrumbs pathway">
+<a href="../index.html" class="pathway">Home</a> <img src="../templates/messy_lab/images/arrow.png" alt=""  /> <a href="../picocomputer.html" class="pathway">picoComputer</a> <img src="../templates/messy_lab/images/arrow.png" alt=""  /> Syntax</span>
+
+        </div>
+      </div>
+      
+      <div class="clr"></div>
+      
+      <div id="whitebox">
+        <div id="area">
+          
+          
+          <div id="leftcolumn">
+                        		<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Navigation</h3>
+											<ul class="menu"><li class="item1"><a href="../index.html"><span>Home</span></a></li><li class="item11"><a href="../messy-lab.html"><span>Messy Lab</span></a></li><li class="parent active item12"><a href="../picocomputer.html"><span>picoComputer</span></a><ul><li class="item19"><a href="architecture.html"><span>Architecture</span></a></li><li id="current" class="active item22"><a href="syntax.html"><span>Syntax</span></a></li><li class="parent item20"><a href="instructions.html"><span>Instructions</span></a></li></ul></li><li class="item13"><a href="../download.html"><span>Download</span></a></li><li class="item14"><a href="../about.html"><span>About</span></a></li></ul>					</div>
+				</div>
+			</div>
+		</div>
+			<div class="module">
+			<div>
+				<div>
+					<div>
+													<h3>Search</h3>
+											<form action="http://www.messylab.com/picocomputer/index.php" method="post">
+	<div class="search">
+		<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" type="text" size="20" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" />	</div>
+	<input type="hidden" name="task"   value="search" />
+	<input type="hidden" name="option" value="com_search" />
+	<input type="hidden" name="Itemid" value="22" />
+</form>					</div>
+				</div>
+			</div>
+		</div>
+	
+                      </div>
+
+                    <div id="maincolumn">
+                                  
+            <table class="nopad">
+              <tr valign="top">
+                <td><table class="contentpaneopen">
+<tr>
+		<td class="contentheading" width="100%">
+					Syntax			</td>
+				
+				<td align="right" width="100%" class="buttonheading">
+		<a href="syntax@tmpl=component&amp;print=1&amp;page=.html" title="Print" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow"><img src="../images/M_images/printButton.png" alt="Print"  /></a>		</td>
+		
+					</tr>
+</table>
+
+<table class="contentpaneopen">
+
+
+
+<tr>
+<td valign="top">
+<p>Consider the following picoComputer program:</p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; Symbols<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a = 1<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b = 2<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c = 3<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; Origin<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ORG 8<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; Instructions<br /></code></p>
+<p><code>start:&nbsp; in a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ; input a<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in b&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; input b<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add c, a, b&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; ; c = a + b<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; out c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ; output c<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; ; input a<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; beq a, 0, end&nbsp; &nbsp; &nbsp;&nbsp; ; if a=0 goto end<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; beq a, a, start&nbsp;&nbsp;&nbsp;&nbsp; ; goto start<br />end:&nbsp;&nbsp;&nbsp; stop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; ; stop execution</code></p>
+<p> </p>
+<p>Every pC program consists of three sections. The first one contains the Symbol definitions, the second one contains a single ORG directive which specifies the address of the first instruction and the third one contains a list of instructions of the program.</p>
+<h4>Symbols</h4>
+<p>The Symbols section is used to define symbol names and their values. Using symbols allows the code to be more human-readable, however the symbol names are discarded during the assembling process, and only their numerical values are used.</p>
+<p>Another way to define symbols is by defining labels. A label is an identifier put in front of an instruction followed by a colon. Examples are <strong><span style="font-family: courier new,courier;">start</span></strong> and <span style="font-family: courier new,courier;"><strong>end</strong></span> from the code above. The value of a label is the address of the instruction following it. For example, label <span style="font-family: courier new,courier;"><strong>start</strong></span> has the value of 8.</p>
+<h4>Origin</h4>
+<p>The ORG directive is used to define the address of the first instruction. This is the value that will be stored in the PC register of the processor when loading the program.</p>
+<h4>Instructions</h4>
+<p>An instruction is defined by its symbolic name, followed by a comma-separated list of operands. There are four kinds of operands supported in the pC symbolic language, as explained in the following table:</p>
+<table class="articletable" border="0">
+<tbody>
+<tr>
+<th>Format</th><th>Example</th><th valign="top" scope="col">Addressing</th><th>Description</th>
+</tr>
+<tr>
+<td>symbol</td>
+<td>a</td>
+<td valign="top">Direct</td>
+<td>The Address of the memory location holding the operand is the value of the symbol.</td>
+</tr>
+<tr>
+<td>(symbol)</td>
+<td>(a)</td>
+<td valign="top">Indirect</td>
+<td>The Address of the memory location holding the operand is stored in memory. The address of the location holding the address is the value of the symbol.</td>
+</tr>
+<tr>
+<td>#symbol</td>
+<td>#a</td>
+<td valign="top">Immidiate</td>
+<td>&nbsp;The operand value is the value of the symbol.<br /></td>
+</tr>
+<tr>
+<td>constant</td>
+<td>5</td>
+<td valign="top">Immidiate</td>
+<td>&nbsp;The operand value is the specified constant itself.<br /></td>
+</tr>
+</tbody>
+</table>
+<p>For further information about the supported instructions, click <a href="instructions.html">here</a>.</p></td>
+</tr>
+
+</table>
+<span class="article_separator">&nbsp;</span>
+
+                  </td>
+                              </tr>
+            </table>
+          </div>
+          <div class="clr"></div>
+        </div>
+
+        <div class="clr"></div>
+      </div>
+      
+      <!--<div id="footerspacer"></div>-->
+      <div id="footer">
+        <div id="footer_l">
+          <div id="footer_r">
+            <p id="syndicate">
+              
+            </p>
+            <p id="power_by">
+			Copyright &copy; 2010-2016. Miloš Anđelković. Powered by <a href="http://www.joomla.org">Joomla!</a>. Valid <a href="http://validator.w3.org/check/referer">XHTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">CSS</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
+<install version="1.5" type="template">
+	<name>messy_lab</name>
+	<creationDate>7/23/10</creationDate>
+	<author>Milos Andjelkovic</author>
+	<authorEmail>drstorm@messylab.com</authorEmail>
+	<authorUrl>http://www.messylab.com</authorUrl>
+	<copyright></copyright>
+	<license></license>
+	<version>1.0</version>
+	<description>Messy Lab Presentation Template, based on rhuk_milkyway by Andy Miller</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>component.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>params.ini</filename>
+		<filename>index.html</filename>
+
+		<filename>css/index.html</filename>
+		<filename>css/template.css</filename>
+
+		<filename>images/arrow.png</filename>
+		<filename>images/grey-line.png</filename>
+		<filename>images/header.jpg</filename>
+		<filename>images/indent1.png</filename>
+		<filename>images/indent2.png</filename>
+		<filename>images/indent3.png</filename>
+		<filename>images/indent4.png</filename>
+		<filename>images/index.html</filename>
+		<filename>images/logo-big.png</filename>
+		<filename>images/logo-small.png</filename>
+		<filename>images/menu-active.png</filename>
+		<filename>images/menu-bg.png</filename>
+		<filename>images/menu-normal.png</filename>
+		<filename>images/menu-separator.png</filename>
+		<filename>images/spacer.png</filename>
+			
+	</files>
+	<positions>
+		<position>breadcrumb</position>
+		<position>left</position>
+		<position>right</position>
+		<position>navigation</position>
+		<position>user1</position>
+		<position>user2</position>
+		<position>footer</position>
+		<position>debug</position>
+		<position>syndicate</position>
+	</positions>
+	<params>
+		<param name="widthStyle" type="list" default="fmax" label="Template Width" description="Width style of the template">
+			<option value="fmax">Fluid with maximum</option>
+			<option value="medium">Medium</option>
+			<option value="small">Small</option>
+		</param>
+	</params>
+</install>

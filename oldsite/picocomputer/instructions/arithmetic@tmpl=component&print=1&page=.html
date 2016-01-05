@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+	  <base href="" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="keywords" content="messy lab, messylab, ide, assembler, assembly, picocomputer" />
+  <meta name="title" content="Arithmetic" />
+  <meta name="author" content="Miloš Anđelković" />
+  <meta name="description" content="Messy Lab - IDE for Assembly Programming Training" />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Arithmetic</title>
+  <link href="../../templates/messy_lab/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="../../media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="../../media/system/js/caption.js"></script>
+
+	<link rel="stylesheet" href="../../templates/messy_lab/css/template.css" type="text/css" />
+</head>
+<body class="contentpane">
+	
+	<table class="contentpaneopen">
+<tr>
+		<td class="contentheading" width="100%">
+					Arithmetic			</td>
+				<td align="right" width="100%" class="buttonheading">
+		<a href="arithmetic.html#" onclick="window.print();return false;"><img src="../../images/M_images/printButton.png" alt="Print"  /></a>		</td>
+	</tr>
+</table>
+
+<table class="contentpaneopen">
+
+
+
+<tr>
+<td valign="top">
+<p>The Arithmetic instructions perform the basic calculations. picoComputer supports Addition, Subtraction, Multiplication and Division. Each operation is supported by two machine instructions, sharing the same symbolic name.</p>
+<p>The difference between the two is whether an operand is a constant value or not.</p>
+<table class="articletable" border="0">
+<tbody>
+<tr>
+<td style="background-color: transparent;">&nbsp;</td>
+<th colspan="2" scope="col">OP Code</th> <th scope="col">Symbolic name</th>
+</tr>
+<tr>
+<th scope="row">Addition</th>
+<td>0001</td>
+<td>1001</td>
+<td>ADD</td>
+</tr>
+<tr>
+<th scope="row">Subtraction</th>
+<td>0010</td>
+<td>1010</td>
+<td>SUB</td>
+</tr>
+<tr>
+<th scope="row">Multiplication</th>
+<td>0011</td>
+<td>1011</td>
+<td>MUL</td>
+</tr>
+<tr>
+<th scope="row">Division</th>
+<td>0100</td>
+<td>1100</td>
+<td>DIV</td>
+</tr>
+<tr>
+<td style="background-color: transparent;">&nbsp;</td>
+<th scope="col">With Constant</th> <th scope="col">Without Constant</th>
+<td style="background-color: transparent;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<h4>Without Constant</h4>
+<p>When none of the operands are constants, arithmetic instructions have the following format:</p>
+<p><code>ADD x, y, z</code></p>
+<p><code>SUB (x), y, z</code></p>
+<p><code>MUL x, (y), (z)</code></p>
+<p><code>DIV (x), (y), z</code></p>
+<table class="articletable">
+<tbody>
+<tr>
+<th colspan="4" scope="col">OP Code</th> <th scope="col">i1</th> <th colspan="3" scope="col">a1</th> <th scope="col">i2</th> <th colspan="3" scope="col">a2</th> <th scope="col">i3</th> <th colspan="3" scope="col">a3</th>
+</tr>
+<tr>
+<td>0<br /></td>
+<td>op<br /></td>
+<td>op<br /></td>
+<td>op<br /></td>
+<td>x<br /></td>
+<td>x</td>
+<td>x<br /></td>
+<td>x<br /></td>
+<td>y<br /></td>
+<td>y<br /></td>
+<td>y<br /></td>
+<td>y<br /></td>
+<td>z<br /></td>
+<td>z<br /></td>
+<td>z<br /></td>
+<td>z<br /></td>
+</tr>
+</tbody>
+</table>
+<p>The result of the arithmetic operation specified by the <span style="font-family: courier new,courier;"><strong>op</strong></span> bits, performed between the operands <span style="font-family: courier new,courier;"><strong>y</strong></span> and <span style="font-family: courier new,courier;"><strong>z</strong></span> is stored in the memory location <span style="font-family: courier new,courier;"><strong>x</strong></span>.<strong>&nbsp;</strong><strong>&nbsp;</strong></p>
+<h4>With Constant</h4>
+<p>The arithmetic instructions can have one constant operand - either the second, or the third one. (The first one cannot be a constant because it is the destination. In C terminology, the first operand has to be an <em>lvalue</em>.)</p>
+<p>The constant operand is marked in the first instruction word by setting the value of both&nbsp;<span style="font-family: courier new,courier;"><strong>i</strong></span> and&nbsp;<span style="font-family: courier new,courier;"><strong>a</strong></span> fields to zero.</p>
+<p> </p>
+<p>When the Second operand is a constant, the instruction has the following format:</p>
+<p><code>ADD x, 5, z</code></p>
+<p><code>SUB (x), #c, z</code></p>
+<table class="articletable">
+<tbody>
+<tr>
+<th colspan="4" scope="col">OP Code</th> <th scope="col">i1</th> <th colspan="3" scope="col">a1</th> <th scope="col">i2</th> <th colspan="3" scope="col">a2</th> <th scope="col">i3</th> <th colspan="3" scope="col">a3</th>
+</tr>
+<tr>
+<td>0<br /></td>
+<td>op<br /></td>
+<td>op<br /></td>
+<td>op<br /></td>
+<td>x<br /></td>
+<td>x</td>
+<td>x<br /></td>
+<td>x<br /></td>
+<td>0<br /></td>
+<td>0<br /></td>
+<td>0<br /></td>
+<td>0<br /></td>
+<td>z<br /></td>
+<td>z<br /></td>
+<td>z<br /></td>
+<td>z<br /></td>
+</tr>
+<tr>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+</tr>
+</tbody>
+</table>
+<p>The result of the arithmetic operation between <span style="font-family: courier new,courier;"><strong>c</strong></span> and <span style="font-family: courier new,courier;"><strong>z</strong></span> is stored in <span style="font-family: courier new,courier;"><strong>x</strong></span>.</p>
+<p> </p>
+<p>When the Third operand is a constant, the following format is used:</p>
+<p><code>MUL x, y, 5<br /></code></p>
+<p><code>DIV (x), y, #c<br /></code></p>
+<table class="articletable">
+<tbody>
+<tr>
+<th colspan="4" scope="col">OP Code</th> <th scope="col">i1</th> <th colspan="3" scope="col">a1</th> <th scope="col">i2</th> <th colspan="3" scope="col">a2</th> <th scope="col">i3</th> <th colspan="3" scope="col">a3</th>
+</tr>
+<tr>
+<td>0<br /></td>
+<td>op<br /></td>
+<td>op<br /></td>
+<td>op<br /></td>
+<td>x<br /></td>
+<td>x</td>
+<td>x<br /></td>
+<td>x<br /></td>
+<td>y<br /></td>
+<td>y<br /></td>
+<td>y<br /></td>
+<td>y<br /></td>
+<td>0<br /></td>
+<td>0<br /></td>
+<td>0<br /></td>
+<td>0<br /></td>
+</tr>
+<tr>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+<td valign="top">c</td>
+</tr>
+</tbody>
+</table>
+<p>The result of the arithmetic operation between <span style="font-family: courier new,courier;"><strong>y</strong></span> and <span style="font-family: courier new,courier;"><strong>c</strong></span> is stored in <span style="font-family: courier new,courier;"><strong>x</strong></span>.</p>
+<p> </p>
+<p>Note: Because zero is used to mark the constant operand, addressing memory location 0 is not allowed.</p></td>
+</tr>
+
+</table>
+<span class="article_separator">&nbsp;</span>
+
+</body>
+</html>

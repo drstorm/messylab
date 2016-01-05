@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! 1.5 - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Messy Lab</title>
+	<subtitle type="text">Messy Lab - IDE for Assembly Programming Training</subtitle>
+	<link rel="alternate" type="text/html" href="http://www.messylab.com"/>
+	<id>http://www.messylab.com/index.php</id>
+	<updated>2016-01-05T14:44:12Z</updated>
+	<generator uri="http://joomla.org" version="1.5">Joomla! 1.5 - Open Source Content Management</generator>
+<link rel="self" type="application/atom+xml" href="http://www.messylab.com/index.php?format=feed&amp;type=atom" />
+	<entry>
+		<title>At a glance</title>
+		<link rel="alternate" type="text/html" href="http://www.messylab.com/component/content/article/6-front-page/3-at-a-glance"/>
+		<published>2010-07-26T15:25:24Z</published>
+		<updated>2010-07-26T15:25:24Z</updated>
+		<id>http://www.messylab.com/component/content/article/6-front-page/3-at-a-glance</id>
+		<author>
+			<name>Miloš Anđelković</name>
+		<email>drstorm@messylab.com</email>
+		</author>
+		<summary type="html">&lt;p&gt;Messy Lab is an free, open-source Integrated Development Environment (IDE) for Assembly Languages.&lt;/p&gt;
+&lt;p&gt;The primary goal for Messy Lab is to provide an intuitive environment for the students of Computer Sciences and Software Engineering, where they can safely and comfortably learn the basics of Assembly programming. The interface is designed to be user-friendly and immediately familiar to anyone who used one of the more popular development environments before.&lt;/p&gt;
+&lt;p&gt;By providing a familiar surrounding, Messy Lab allows its users to focus on the challenges of the assembly programming itself, instead of wasting the effort on getting used to hostile-seeming environments provided by some of the other assembler development solutions.&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;Messy Lab is an free, open-source Integrated Development Environment (IDE) for Assembly Languages.&lt;/p&gt;
+&lt;p&gt;The primary goal for Messy Lab is to provide an intuitive environment for the students of Computer Sciences and Software Engineering, where they can safely and comfortably learn the basics of Assembly programming. The interface is designed to be user-friendly and immediately familiar to anyone who used one of the more popular development environments before.&lt;/p&gt;
+&lt;p&gt;By providing a familiar surrounding, Messy Lab allows its users to focus on the challenges of the assembly programming itself, instead of wasting the effort on getting used to hostile-seeming environments provided by some of the other assembler development solutions.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>picoComputer</title>
+		<link rel="alternate" type="text/html" href="http://www.messylab.com/component/content/article/6-front-page/4-picocomputer"/>
+		<published>2010-07-26T16:30:39Z</published>
+		<updated>2010-07-26T16:30:39Z</updated>
+		<id>http://www.messylab.com/component/content/article/6-front-page/4-picocomputer</id>
+		<author>
+			<name>Miloš Anđelković</name>
+		<email>drstorm@messylab.com</email>
+		</author>
+		<summary type="html">&lt;p&gt;picoComputer is a computer architecture designed to aid teaching of assembly languages.&lt;/p&gt;
+&lt;p&gt;Even though it is very simplistic and relatively old, picoComputer is still relevant today. The basic principles of the computer technology didn't change much, if at all, since its inception and when it comes to assembly programming, the picoComputer architecture is capable of demonstrating those very principles.&lt;/p&gt;
+&lt;p&gt;That is why the picoComputer was selected to be the first platform supported by Messy Lab.&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;picoComputer is a computer architecture designed to aid teaching of assembly languages.&lt;/p&gt;
+&lt;p&gt;Even though it is very simplistic and relatively old, picoComputer is still relevant today. The basic principles of the computer technology didn't change much, if at all, since its inception and when it comes to assembly programming, the picoComputer architecture is capable of demonstrating those very principles.&lt;/p&gt;
+&lt;p&gt;That is why the picoComputer was selected to be the first platform supported by Messy Lab.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>Debugger</title>
+		<link rel="alternate" type="text/html" href="http://www.messylab.com/component/content/article/6-front-page/5-debugger"/>
+		<published>2010-07-26T16:51:25Z</published>
+		<updated>2010-07-26T16:51:25Z</updated>
+		<id>http://www.messylab.com/component/content/article/6-front-page/5-debugger</id>
+		<author>
+			<name>Miloš Anđelković</name>
+		<email>drstorm@messylab.com</email>
+		</author>
+		<summary type="html">&lt;p&gt;Messy Lab comes with its own debugger. It is well integrated within the environment, but it can be used as a stand-alone command-line (CLI) application as well.&lt;/p&gt;
+&lt;p&gt;The CLI flont-end uses commands similar to those of &lt;a href=&quot;http://www.gnu.org/software/gdb/&quot;&gt;GDB&lt;/a&gt;, so anyone familiar with GDB should feel right at home.&lt;/p&gt;
+&lt;p&gt;Finally, with the support of the underlying execution environment, e.g. a virtual machine, the debugger features historical, or backwards execution.&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;Messy Lab comes with its own debugger. It is well integrated within the environment, but it can be used as a stand-alone command-line (CLI) application as well.&lt;/p&gt;
+&lt;p&gt;The CLI flont-end uses commands similar to those of &lt;a href=&quot;http://www.gnu.org/software/gdb/&quot;&gt;GDB&lt;/a&gt;, so anyone familiar with GDB should feel right at home.&lt;/p&gt;
+&lt;p&gt;Finally, with the support of the underlying execution environment, e.g. a virtual machine, the debugger features historical, or backwards execution.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>On-the-fly assembling</title>
+		<link rel="alternate" type="text/html" href="http://www.messylab.com/component/content/article/6-front-page/6-on-the-fly-assembling"/>
+		<published>2010-07-26T16:59:49Z</published>
+		<updated>2010-07-26T16:59:49Z</updated>
+		<id>http://www.messylab.com/component/content/article/6-front-page/6-on-the-fly-assembling</id>
+		<author>
+			<name>Miloš Anđelković</name>
+		<email>drstorm@messylab.com</email>
+		</author>
+		<summary type="html">&lt;p&gt;The code editor features&amp;nbsp;On-the-fly&amp;nbsp;assembling of the source code which means that the your code is being processed as you type.&lt;/p&gt;
+&lt;p&gt;The generated machine code is displayed along side with the source code, making it easy to see the direct link that exists between the symbolic representation of the machine code (i.e. the source code)&amp;nbsp;and its actual binary form.&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;The code editor features&amp;nbsp;On-the-fly&amp;nbsp;assembling of the source code which means that the your code is being processed as you type.&lt;/p&gt;
+&lt;p&gt;The generated machine code is displayed along side with the source code, making it easy to see the direct link that exists between the symbolic representation of the machine code (i.e. the source code)&amp;nbsp;and its actual binary form.&lt;/p&gt;</content>
+	</entry>
+	<entry>
+		<title>Open-source</title>
+		<link rel="alternate" type="text/html" href="http://www.messylab.com/component/content/article/6-front-page/7-open-source"/>
+		<published>2010-07-26T17:23:36Z</published>
+		<updated>2010-07-26T17:23:36Z</updated>
+		<id>http://www.messylab.com/component/content/article/6-front-page/7-open-source</id>
+		<author>
+			<name>Miloš Anđelković</name>
+		<email>drstorm@messylab.com</email>
+		</author>
+		<summary type="html">&lt;p&gt;Messy Lab is distributed under the Apache License. That essentially means that you are free to use the app and its source code any way you like. So, if you're familiar with C#, grab your copy of the code and start exploring.&lt;/p&gt;
+&lt;p&gt;You are &lt;em&gt;not&lt;/em&gt; required under the license to publish any modifications you make to the source, but contributing bug fixes and new features would be appreciated.&lt;/p&gt;</summary>
+		<content type="html">&lt;p&gt;Messy Lab is distributed under the Apache License. That essentially means that you are free to use the app and its source code any way you like. So, if you're familiar with C#, grab your copy of the code and start exploring.&lt;/p&gt;
+&lt;p&gt;You are &lt;em&gt;not&lt;/em&gt; required under the license to publish any modifications you make to the source, but contributing bug fixes and new features would be appreciated.&lt;/p&gt;</content>
+	</entry>
+</feed>
