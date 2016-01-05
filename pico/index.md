@@ -28,13 +28,13 @@ This page does into details of the picoComputer arhitecture and its instruction 
 
 picoComputer features a very simple architecture that consists of the CPU, RAM and an I/O Device, connected using a single Bus, as shown on the following figure:
 
-![pC Architecture]({{ site-url }}/images/pc-architecture.png "architecture")
+<img src="{{ site.url }}/images/pc-architecture.png">
 
 ## Memory
 
 The memory of a picoComputer contains a maximum of 65536 words, each 16 bits wide. That means that the addresses are 16 bits wide as well. The memory is divided in two logical parts, as depicted on the following figure:
 
-![pC Memory]({{ site-url }}/images/pc-memory.png "memory")
+<img src="{{ site.url }}/images/pc-memory.png">
 
 The Fixed Data Area consists of the first 8 memory locations and these locations play the role similar to that of the general-purpose processor Registers found in most of the other processor architectures.
 
