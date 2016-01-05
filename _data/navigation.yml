@@ -1,0 +1,16 @@
+# Site navigation links
+
+- title: picoComputer
+  url: /pico/
+  excerpt: "picoComputer Specification.."
+  image: 400x250.gif
+
+- title: Download
+  url: /download/
+  excerpt: "Download Messy Lab and source code."
+  image: 400x250.gif
+
+- title: About
+  url: /about/
+  excerpt: "Information about Messy Lab."
+  image: 400x250.gif

@@ -1,0 +1,35 @@
+# Site wide configuration
+
+title: Messy Lab
+description: "A free, open-source IDE for Assembly Languages"
+logo: 120x120.gif
+teaser: 400x250.gif
+locale: en_US
+url: /messylab
+
+# Jekyll configuration
+
+sass:
+  sass_dir: _sass
+  style: compressed
+permalink: /:categories/:title/
+kramdown:
+  toc_levels: 1..2
+highlighter: pygments
+gems:
+  - jekyll-sitemap
+
+
+# Site owner
+owner:
+  name: Milos Andjelkovic
+  web: http://messylab.com
+  email: a.milos85@gmail.com
+  avatar: bio-photo.jpg # 160x160 px image for author byline
+  google:
+    ad-client: ca-pub-4009796446816232
+    ad-slot: 7374285703
+  disqus-shortname:
+
+
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]

@@ -1,0 +1,13 @@
+# Footer navigation links
+
+- title: Home
+  url: /
+
+- title: picoComputer
+  url: /pico/
+
+- title: Download
+  url: /download/
+
+- title: About
+  url: /about/
