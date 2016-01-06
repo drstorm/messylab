@@ -11,7 +11,7 @@ ads: false
 ---
 
 **Experienced Software Engineer**  
-a.milos85@gmail.com, +381 69 616 394, B. Mihaila Pupina 99, Belgrade, Serbia
+a.milos85@gmail.com
 
 ---
 
