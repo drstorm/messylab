@@ -7,7 +7,7 @@ image:
   teaser:
   thumb:
 share: false
-ads: true
+ads: false
 ---
 
 picoComputer is a computer architecture developed by Dr Jozo Dujmović in 1989 to aid teaching of assembly languages. Along with the architecture design, Dr Dujmović developed a DOS application called "pC Assembler and Simulator", or pCAS for short.
