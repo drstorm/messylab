@@ -7,7 +7,7 @@ image:
   teaser:
   thumb:
 share: false
-ads: true
+ads: false
 ---
 
 Messy Lab release files, as well as the Source Code Repository are hosted at [GitHub](https://github.com/drstorm/messylab/).
